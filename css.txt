@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+
+}
+#header{
+    height: 60px;
+    background-color: rgb(54, 54, 193);
+}
+
+#nav li a{
+    color: azure;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 20px;
+    display: inline-block;
+
+}
+
+#logo{
+    list-style: none;
+}
+#logo img{
+    max-height: 35px;
+    padding-right: 20px;
+}
+
+#nav li:hover a{
+    color: rgb(54, 54, 193);
+    background-color: azure;
+}
+
+#nav .subnav{
+    display: none;
+}
+
+#nav li{
+    display: inline-block;
+}
+
+#slider{
+
+}
+#content{
+
+}
+#footer{
+
+}

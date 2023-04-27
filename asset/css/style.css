@@ -1,0 +1,394 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --chelblue: #034694 ;
+    --chelfade: #033670;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+
+}
+#header{
+    height: 120px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav li a{
+   font-size: 18px;
+   font-family: sans-serif;
+   font-weight: 600;
+}
+#nav .logo-header{
+    width: 100px;
+    float: left;
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+#nav >li > a{
+    color: var(--chelblue);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 120px;
+    padding: 0 20px;
+}
+
+#nav > li:hover > a{
+    /* border-bottom: 3px solid var(--chelblue); */
+    color: #fff;
+    background-color: var(--chelblue);
+}
+#nav > li > a{
+    text-transform: uppercase;
+}
+
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: var(--chelblue);
+    min-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 100%;
+    left: 0;
+}
+
+
+#nav .subnav a{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+#nav .subnav a:hover{
+    
+}
+#nav .subnav li:hover{
+   background-color: var(--chelfade);
+}
+
+#nav .subnav li{
+    width: 100%;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .btn-search{
+    float: right;
+    color: var(--chelblue);
+    line-height: 120px;
+    padding: 0 40px;
+}
+
+#header .btn-search:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--chelblue);
+}
+
+#slider{
+    padding-top: 50%;
+    position: relative;
+    background: url('https://img.chelseafc.com//image/upload/f_auto,c_fill,g_faces,w_1440,h_856,q_90/editorial/match-reports/2022-23/Real%20Madrid%20home%20UCL/lampard-real-madrid-h.jpg') top center / cover no-repeat;
+    margin-top: 70px;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    right: 16%;
+}
+
+#slider .text-header{
+    color: #fff;
+    font-size: 44px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 36px;
+}
+#slider .text-description{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 16px;
+}
+
+#content{
+    
+}
+
+#content #about-content{
+    background-color: #034694;
+    padding: 36px 0;
+}
+
+#about-content .text-header {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    padding-bottom: 12px;
+    font-size: 40px;
+    color: #fff;
+}
+
+#about-content .sub-text-header {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+#about-content .text-description{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #fff;
+    text-align: justify;
+    line-height: 20px;
+}
+
+#team .team-item{
+    /* display: inline-block; */
+    float: left;
+    
+}
+
+#team {
+    padding: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.team-item .name{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #034694;
+}
+
+.team-item{
+    padding: 0 24px;
+}
+.team-item .img-men,
+.team-item .img-women{
+    width: 300px;
+    background-color: #034694;
+    border-radius: 10%;
+    
+}
+#match-content{
+    color: #fff;
+    background-image: url('/asset/content/matchday/background_matchday.webp');
+    background-size: cover;
+    height: 500px;
+}
+
+#match-content .text-header{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 36px;
+    padding-bottom: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#match-content .sub-text-header{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 36px;
+}
+
+.match-list .match-list-1,
+.match-list .match-list-2,
+.match-list .match-list-3{
+    margin: auto;
+    height: 195px;
+    position: relative;
+    background-color: #fff;
+    color: #034694;
+    display: inline-block;
+    
+}
+
+.match-list #match-tournament{
+    color: #7F7F7F;
+    font-weight: 650;
+    font-size: 9px;
+    line-height: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.match-list {
+    display: flex;
+    justify-content: center;
+    height: 195px;
+}
+
+
+
+
+
+.match-list #match-calendar{
+    color: #404040;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 20px;
+}
+
+.match-list > p {
+    color: #7F7F7F;
+    font-size: 9px;
+
+}
+
+
+
+.match-display{
+    list-style-type: none;
+    display: flex;
+    height: 68px;
+    justify-content: center;
+}
+
+.button-match-centre #btn-match-centre{
+    color: #fff;
+    background-color: #034694;
+    position: absolute;
+    padding-right: 24px;
+    width: 292px;
+    height: 48px;
+    cursor: pointer;
+    font-weight: 600;
+    float: left;
+    top: 13px;
+}
+
+.button-match-centre{
+    position: relative;
+}
+
+
+#btn-match-centre i{
+    position: absolute;
+    right: 100px;
+    margin-top: 2px;
+    font-weight: 700;
+}
+
+.match-display .match-up {
+    padding: 8px 12px;
+    width: 88px;
+    height: 36px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 4%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.match-display .match-up > p{
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   align-items: center;
+   
+   font-size: 18px;
+   font-weight: 700;
+   letter-spacing: 2px;
+}
+
+
+
+.match-display .img-club{
+    display: block;
+    width: 48px;
+    margin: 0 auto;
+}
+
+.match-display .name-club{
+    font-size: 11px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.match-display .club{
+    padding: 0 12px;
+    height: 68px;
+    width: 90px;
+    justify-content: center;
+    text-align: center;
+}
+
+.match-display{
+    padding: 0 12px;
+}
+
+.sponsor-block  .sponsor-primary{
+   text-align: center;
+   padding: 36px 0px;
+}
+
+.sponsor-primary .list-sponsor-prim li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.list-sponsor-second{
+    padding: 36px 300px;
+    background-color: #F1F3F6;
+}
+.list-sponsor-prim img {
+    width: 132px;
+}
+
+.list-sponsor-second img{
+    width: 132px;
+    margin: 0 24px;
+    padding: 16px 0;
+}
+
+.list-sponsor-second li{
+    display: inline-block;
+    text-align: center;
+   
+}
+.sponsor-block{
+}
+
+#footer{
+    
+}

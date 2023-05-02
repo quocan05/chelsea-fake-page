@@ -16,7 +16,7 @@ html{
 
 }
 #header{
-    height: 120px;
+    height: 100px;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -45,7 +45,7 @@ html{
     color: var(--chelblue);
     text-decoration: none;
     display: inline-block;
-    line-height: 120px;
+    line-height: 100px;
     padding: 0 20px;
 }
 
@@ -391,4 +391,93 @@ html{
 
 #footer{
     
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .modal-container-login{
+    background: var(--chelblue);
+    padding-top: 65px;
+    display: block;
+    text-align: center;
+}
+
+.modal-container-login{
+    min-height: 500px;
+    width: 680px;
+    padding: 0 84px 100px;
+    position: relative;
+}
+.modal-header .login-header{
+    color: #fff;
+    font-size: 30px;
+    padding: 29px;
+}
+
+.modal-header #img-logo-login{
+    width: 92px;
+    text-align: center;
+}
+
+.modal .modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 24px;
+    background: #03f;
+}
+
+.modal-body .input-username,
+.modal-body .input-password
+{
+    font: inherit;
+    width: 100%;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    border: 0;
+    outline: none;
+    
+    background: none;
+    box-sizing: content-box;
+    border-bottom: 3px solid #FBB700;
+}
+
+.modal-body #forget-pass > a{
+    color: #b88f4f;
+    text-decoration: none;
+}
+
+::placeholder{
+    color: #FBB700;
+}
+
+.modal-body .input-require{
+    color: #FBB700;
+    font-size: 12px;
+    text-align: left;
+    margin: 3px 0px 0px;
+}
+
+.modal-footer > span{
+    color: #fff;
+}
+
+.modal-footer #signup-area{
+    color: #fff;
+}
+
+.modal-footer #signup-area > a{
+    color: #b88f4f;
+    text-decoration: none;
 }

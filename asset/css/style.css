@@ -21,7 +21,7 @@ html{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     z-index: 1;
 }
 
@@ -104,7 +104,7 @@ html{
 #header .btn-search{
     float: right;
     color: var(--chelblue);
-    line-height: 120px;
+    line-height: 100px;
     padding: 0 40px;
 }
 
@@ -118,7 +118,7 @@ html{
     padding-top: 50%;
     position: relative;
     background: url('https://img.chelseafc.com//image/upload/f_auto,c_fill,g_faces,w_1440,h_856,q_90/editorial/match-reports/2022-23/Real%20Madrid%20home%20UCL/lampard-real-madrid-h.jpg') top center / cover no-repeat;
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 
 #slider .text-content{
@@ -397,6 +397,7 @@ html{
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: 2;
     right: 0;
     background:rgba(0, 0, 0, 0.3);
     display: flex;
@@ -405,7 +406,7 @@ html{
 }
 .modal .modal-container-login{
     background: var(--chelblue);
-    padding-top: 65px;
+    
     display: block;
     text-align: center;
 }
@@ -413,7 +414,8 @@ html{
 .modal-container-login{
     min-height: 500px;
     width: 680px;
-    padding: 0 84px 100px;
+    padding: 12px 84px;
+    margin-top: 80px;
     position: relative;
 }
 .modal-header .login-header{
@@ -436,8 +438,19 @@ html{
     background: #03f;
 }
 
-.modal-body .input-username,
-.modal-body .input-password
+
+.modal-login-body{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+.modal-login-body input{
+    color: #FBB700;
+}
+
+.modal-login-body .input-username,
+.modal-login-body .input-password
 {
     font: inherit;
     width: 100%;
@@ -447,26 +460,46 @@ html{
     padding: 6px 0 7px;
     border: 0;
     outline: none;
-    
     background: none;
     box-sizing: content-box;
     border-bottom: 3px solid #FBB700;
 }
 
-.modal-body #forget-pass > a{
+.modal-container-login #forget-pass > a{
     color: #b88f4f;
     text-decoration: none;
+    font-weight: 700;
+}
+
+.modal-container-login #forget-pass{
+    padding: 8px;
 }
 
 ::placeholder{
     color: #FBB700;
 }
 
-.modal-body .input-require{
+.modal-login-body .input-require{
     color: #FBB700;
     font-size: 12px;
     text-align: left;
     margin: 3px 0px 0px;
+}
+
+.modal-login-body #btn-login{
+    background-color: #03f;
+    border-color: #03f;
+    font-size: .875rem;
+    font-weight: 700;
+    height: 48px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }
 
 .modal-footer > span{
@@ -480,4 +513,27 @@ html{
 .modal-footer #signup-area > a{
     color: #b88f4f;
     text-decoration: none;
+}
+.modal-footer button{
+    background-color: #03f;
+    border-color: #03f;
+    font-size: .875rem;
+    font-weight: 700;
+    height: 48px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-footer .login-facebook{
+    background: #304a83;
+    border-color: #304a83;
+}
+
+.modal-footer .login-google{
+    background: #ed1c24;
+    border-color: #ed1c24;
+}
+.modal-footer .login-apple{
+    background: #000;
+    border-color: #000;
 }

@@ -240,7 +240,7 @@
                 <img id="img-logo-login" src="/asset/content/matchday/chel.webp" alt="logo-header-login">
                 <h2 class="login-header">Login</h2>
             </header>
-            <div class="modal-body">
+            <form action="" method="post" class="modal-login-body">
                 <input type="text" class="input-username" placeholder="Email">
                 <p class="input-require">
                     Please enter a valid email address
@@ -255,25 +255,29 @@
                     Login
                 </button>
 
-                <p id="forget-pass">
-                    <a href="">
-                        Forgot password
-                    </a>
-                </p>
-            </div>
+                
+            </form>
+            <p id="forget-pass">
+                <a href="">
+                    Forgot password
+                </a>
+            </p>
 
             <div class="modal-footer">
                 <span>
                     or
                 </span>
+               
 
-                <button id="login-facebook">
+                <button class="login-facebook ti-facebook">
                     Log in with Facebook
                 </button>
-                <button id="login-google">
+                
+                <button class="login-google ti-google">
                     Log in with Google
                 </button>
-                <button id="login-apple">
+                
+                <button class="login-apple ti-apple">
                     Log in with Apple
                 </button>
 

@@ -84,6 +84,7 @@ html{
     text-decoration: none;
     line-height: 50px;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 #nav .subnav a:hover{
@@ -390,8 +391,109 @@ html{
 }
 
 #footer{
+    position: relative;
+    background-color: #001489;
     
 }
+
+#footer .img-stadium{
+    object-fit: cover;
+    width: 100%;
+}
+
+#footer .footer-container
+{ 
+    color: #fff;
+    padding: 50px 0px 0px;
+    margin-left: 82px;
+    margin-right: 82px;
+    border-bottom: 0.5px solid #ffff;
+}
+
+
+.footer-container li{
+    list-style-type: none;
+}
+
+.footer-container .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .logo .logo-footer{
+    width: 100px;
+    height: 100px;
+}
+
+#footer .adress-footer{
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+}
+
+.adress-footer > header{
+    font-weight: 700;
+}
+
+.footer-container .footer-content{
+    padding: 0px 0px 53px;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.footer-content .contact-footer{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    color: #fff;
+
+}
+.contact-footer >  a{
+    color: #fff;
+    display: block;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-content .app-prom img{
+    width: 120px;
+}
+
+.legal-panel{
+    color: #fff;
+    background-color: #140a47;
+}
+
+.footer-link{
+    padding: 12px 0px;
+    
+}
+.footer-link .footer-link-nav{
+    margin-left: 82px;
+    margin-right: 82px;
+    gap: 32px;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+}
+
+.legal-panel .footer-list-item{
+    list-style-type: none;
+}
+
+.legal-panel .footer-link-list{
+    display: flex;
+    gap: 24px;
+}
+
+.legal-panel .footer-legal-copyright{
+    padding: 24px 0px;
+    margin-left: 82px;
+    margin-right: 82px;
+}
+
+
 .modal{
     position: fixed;
     top: 0;
@@ -400,10 +502,15 @@ html{
     z-index: 2;
     right: 0;
     background:rgba(0, 0, 0, 0.3);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
+
+.modal.open{
+    display: flex;
+}
+
 .modal .modal-container-login{
     background: var(--chelblue);
     
@@ -417,6 +524,7 @@ html{
     padding: 12px 84px;
     margin-top: 80px;
     position: relative;
+    animation: modalIn ease 0.3s;
 }
 .modal-header .login-header{
     color: #fff;
@@ -536,4 +644,16 @@ html{
 .modal-footer .login-apple{
     background: #000;
     border-color: #000;
+}
+
+@keyframes modalIn {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

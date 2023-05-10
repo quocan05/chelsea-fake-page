@@ -30,9 +30,9 @@
                     <i class="nav-arrow-down ti-angle-down"></i>
                 </a>
                 <ul class="subnav">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Stamford Bridge</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a class="js-login">Login</a></li>
+                    <li><a >Stamford Bridge</a></li>
+                    <li><a >Contact Us</a></li>
                 </ul>
             </li>
            </ul>
@@ -225,16 +225,72 @@
 
         </div>
         <div id="footer">
+            
+            <img class="img-stadium" src="./asset/New folder/Stamford_Bridge_stadium.jpg" alt="Stamford_Bridge_stadium">
+
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="./asset/img/logo.png" alt="" class="logo-footer">
+                </div>
+                <div class="footer-content">
+                    <div class="adress-footer">
+                        
+                            <header>Chelsea Football Club
+                            </header>
+                            <p>Stamford Bridge
+                            </p>
+                            <p>Fulham Road
+                            </p>
+                            <p>London
+                            </p>
+                            <p>SW6 1HS
+                            </p>
+                        
+                    </div>
+                    
+                    <div class="contact-footer">
+                        
+                          <a href="">Contact Us</a>
+                            <a href="">Frequently Asked Questions</a>
+                           <a href="">Junior Blues</a>
+                        
+                    </div>
+                    
+                    <div class="app-prom">
+                        <a href="https://apps.apple.com/gb/app/chelsea-fc-the-5th-stand/id1353142218?shortlink=id1x1kng&c=Website_Landing_Preferences&pid=Website&deep_link_value=Website_Landing_Preferences&source_caller=ui"><img src="./asset/New folder/appstore.webp" alt=""></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.chelseafc.the5thstand&hl=en_US&gl=US&shortlink=03ey3mli&c=Website_Landing_Preferences&pid=Website&deep_link_value=Website_Landing_Preferences&source_caller=ui"><img src="./asset/New folder/ggplay.webp" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-panel">
+                <div class="footer-link">
+                    <nav class="footer-link-nav">
+                        <ul class="footer-link-list">
+                        <li class="footer-list-item"><a>Careers</a></li>
+                        <li class="footer-list-item"><a>Modern Slavery Act</a></li>
+                        <li class="footer-list-item"><a>Privacy Policy</a></li>
+                        <li class="footer-list-item"><a>Cookies Policy</a></li>
+                        <li class="footer-list-item"><a>Terms & Conditions</a></li>
+                        <li class="footer-list-item"><a>Environmental Policy</a></li>
+                    </u>
+                </nav></div>
+                <div class="footer-legal-copyright">
+                    <p>© 2023 Chelsea FC. All rights reserved. No part of this site may be reproduced without our written permission.</p>
+                </div>
+            </div>
+            
 
         </div>
+
     </div>
 
-    <div class="modal">
+    <div class="modal js-modal">
         
-        <div class="modal-container-login">
+        <div class="modal-container-login js-login-container">
             
             <div class="modal-close">
-                <i class="ti-close"></i>
+                <i class="ti-close js-close"></i>
             </div>
             <header class="modal-header">
                 <img id="img-logo-login" src="/asset/content/matchday/chel.webp" alt="logo-header-login">
@@ -289,5 +345,31 @@
 
         </div>
     </div>
+
+
 </body>
+<script>
+    const btnLogin = document.querySelector('.js-login')
+    const modal = document.querySelector('.js-modal')
+    const closeLogin = document.querySelector('.js-close')
+    const modalLoginContainer = document.querySelector('.js-login-container')
+
+    function showLogin() {
+        modal.classList.add('open')
+    }
+
+    function hideLogin(){
+        modal.classList.remove('open')
+    }
+
+    btnLogin.addEventListener('click', showLogin)
+
+    closeLogin.addEventListener('click', hideLogin)
+
+
+    modal.addEventListener('click', hideLogin)
+    modalLoginContainer.addEventListener('click', function(event){
+        event.stopPropagation()
+    })
+</script>
 </html>

@@ -23,10 +23,10 @@
                     <img class="img-logo-header" src="./asset/img/logo.png" alt="logo-header">
                 </a>
             </div>
-            <li><a href="">Latest</a></li>
-            <li><a href="">About Chelsea</a></li>
-            <li><a href="">Match</a></li>
-            <li><a href="">Sponsor</a></li>
+            <li><a href="#slider">Latest</a></li>
+            <li><a href="#about-content">About Chelsea</a></li>
+            <li><a href="#match-content">Match</a></li>
+            <li><a href="#sponsor-block">Sponsor</a></li>
             <li>
                 <a href="">
                     More
@@ -34,8 +34,8 @@
                 </a>
                 <ul class="subnav">
                     <li><a class="js-login">Login</a></li>
-                    <li><a >Stamford Bridge</a></li>
-                    <li><a >Contact Us</a></li>
+                    <li><a href="#img-stadium">Stamford Bridge</a></li>
+                    <li><a href="https://www.chelseafc.com/en/contact-us">Contact Us</a></li>
                 </ul>
             </li>
            </ul>
@@ -192,7 +192,7 @@
 
             <!-- Begin sponsor -->
 
-            <div class="sponsor-block">
+            <div id="sponsor-block">
                 <div class="sponsor-primary">
                     <ul class="list-sponsor-prim">
                         <li><a href="https://www.nike.com/" target="_blank" id="img-sponsor">
@@ -229,7 +229,7 @@
         </div>
         <div id="footer">
             
-            <img class="img-stadium" src="./asset/New folder/Stamford_Bridge_stadium.jpg" alt="Stamford_Bridge_stadium">
+            <img id="img-stadium" src="./asset/New folder/Stamford_Bridge_stadium.jpg" alt="Stamford_Bridge_stadium">
 
             <div class="footer-container">
                 <div class="logo">
@@ -351,12 +351,12 @@
 
 
     <div class="search-box js-search-box">
-        <div class="search-close ti-close">          
+        <div class="search-close ti-close js-close-search">          
         </div>
         <form action="/search" method="get" class="search-form">
             <div class="search-field">
                 <input type="text" class="search-field-input" placeholder="What are you looking for?">
-                <a class="search-submit ti-search js-close-search"></a>
+                <a class="search-submit ti-search"></a>
             </div>
             
         </form>
@@ -369,9 +369,9 @@
     const modal = document.querySelector('.js-modal')
     const closeLogin = document.querySelector('.js-close')
     const modalLoginContainer = document.querySelector('.js-login-container')
-    const searchBox = document.querySelector('js-search-box')
-    const btnCloseSearch = document.querySelector('js-close-search')
-    const btnSearch = document.querySelector('js-open-search')
+    const searchBox = document.querySelector('.js-search-box')
+    const btnCloseSearch = document.querySelector('.js-close-search')
+    const btnSearch = document.querySelector('.js-open-search')
 
     function showSearch(){
         searchBox.classList.add('open')
@@ -400,5 +400,6 @@
     })
 
     btnSearch.addEventListener('click',showSearch)
+    btnCloseSearch.addEventListener('click', hideSearch)
 </script>
 </html>

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="fonts_ic/themify-icons/themify-icons.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Y/2x3N/dV89HVuqol+P0TR53JzrK7iW7yY7n6x4M1rD6Cto7JbSZ0nyjS5JyImtb9k6mEJMvjnXjvJfYKclWGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
     <div id="main">
@@ -17,7 +20,7 @@
            <ul id="nav">
             <div class="logo-header">
                 <a id="logo-header" href="">
-                    <img class="logo-header" src="./asset/img/logo.png" alt="logo-header">
+                    <img class="img-logo-header" src="./asset/img/logo.png" alt="logo-header">
                 </a>
             </div>
             <li><a href="">Latest</a></li>
@@ -38,8 +41,8 @@
            </ul>
            <!-- End header -->
            <!-- Begin Search Button -->
-           <div class="btn-search ti-search">
-            
+           <div class="btn-search ti-search js-open-search">
+                
            </div>
            <!-- End Search Button -->
 
@@ -347,12 +350,36 @@
     </div>
 
 
+    <div class="search-box js-search-box">
+        <div class="search-close ti-close">          
+        </div>
+        <form action="/search" method="get" class="search-form">
+            <div class="search-field">
+                <input type="text" class="search-field-input" placeholder="What are you looking for?">
+                <a class="search-submit ti-search js-close-search"></a>
+            </div>
+            
+        </form>
+        <img src="./asset/New folder/chelsea-banner.png" alt="banner" class="banner">
+    </div>
+
 </body>
 <script>
     const btnLogin = document.querySelector('.js-login')
     const modal = document.querySelector('.js-modal')
     const closeLogin = document.querySelector('.js-close')
     const modalLoginContainer = document.querySelector('.js-login-container')
+    const searchBox = document.querySelector('js-search-box')
+    const btnCloseSearch = document.querySelector('js-close-search')
+    const btnSearch = document.querySelector('js-open-search')
+
+    function showSearch(){
+        searchBox.classList.add('open')
+    }
+
+    function hideSearch(){
+        searchBox.classList.remove('open')
+    }
 
     function showLogin() {
         modal.classList.add('open')
@@ -371,5 +398,7 @@
     modalLoginContainer.addEventListener('click', function(event){
         event.stopPropagation()
     })
+
+    btnSearch.addEventListener('click',showSearch)
 </script>
 </html>
